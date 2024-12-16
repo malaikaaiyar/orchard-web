@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>[orchard]</title>
+  <link rel="icon" type="image/png" href="./static/icon.avif">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Dokdo&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+<link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <header>
+    <img src="./static/banner_no_bg.png" id="banner" style="margin-bottom: 20px;" />
+    <nav>
+      (<a href="./index.html">home</a>)
+      &nbsp;&nbsp;
+      (<a href="./about.html">about</a>)
+      &nbsp;&nbsp;
+      (<a href="./photos.html">photos</a>)
+      &nbsp;&nbsp;
+      (<a href="./logs.html">logs</a>)
+    </nav>
+  </header>
+  <!--<div class="doodle-container">
+    <div id="doodles">
+      <img src="./static/doodles/cat.png" id="longcat" />
+      <img src="./static/doodles/sparkle.png" id="sparkle" />
+      <img src="./static/doodles/john.png" id="john" />
+      <img src="./static/doodles/swag.png" id="swag" />
+      <img src="./static/doodles/star.png" id="star" />
+      <img src="./static/doodles/sun.png" id="sun" />
+      <img src="./static/doodles/plant.png" id="plant" />
+    </div>
+  </div>-->
+  <article>
+    <p>
+     [orchard] is a home for artists, writers, makers and crafters to make something new alongside people who care and inspire.
+    </p>
+    <img src="./static/night-warmth.jpeg" id="photo" style="box-shadow: 0 0 50px rgb(65, 2, 2);" />
+    <p>
+      we grow a space where both students and practioners, philosophers and technicians, for people to converse, build, and laugh. 
+    </p>
+
+    <h2>{sessions}</h2>
+
+    <p>we meet on tuesday nights and saturday mornings for around 3 hours at a time; check out our <a href="https://lu.ma/orchard">lu.ma</a> to see upcoming events.</p>
+
+
+    <!--<h2>Sessions</h2>
+    <p>we put our session information on <a href="https://lu.ma/orchard" target="_blank">lu.ma</a>, sign up there by clicking the button below,</p>
+
+    <br>
+    <div style="text-align: center; margin: 20px 0;">
+      <button onclick="window.open('https://lu.ma/orchard', '_blank')" style="padding: 10px 20px; font-size: 1.6rem; cursor: pointer; font-family: 'Dokdo'; border-radius: 10px;">
+        join session!
+      </button>
+    </div>
+    <iframe src="https://lu.ma/embed/calendar/cal-ca5bcc9bb513dd53/events?lt=dark" width="600" height="400"
+      frameborder="0" style="border: 1px solid #bfcbda88; border-radius: 4px;" allowfullscreen="" aria-hidden="false"
+      tabindex="0"></iframe>
+
+    <h2>Project Scrapbook</h2>
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+      src="https://embed.figma.com/board/CxfCilgo4Y0218eauf6kkG/Playspace----Scrapbook?node-id=0-1&embed-host=share"
+      allowfullscreen></iframe>
+    -->
+  </article>
+
+  <div id="cursor-chat-layer">
+    <input type="text" id="cursor-chat-box">
+  </div>
+  <script type="module">
+    import {initCursorChat} from 'https://esm.sh/cursor-chat'
+    initCursorChat("your-room-name-here")
+  </script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/cursor-chat/dist/style.css" />
+</body>
+
+</html>
