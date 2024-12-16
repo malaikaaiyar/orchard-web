@@ -181,11 +181,11 @@ function updateMode() {
     if (isDay) {
         document.body.className = 'light-mode';
         renderGallery(dayImagesByDate, true);  // Render day images
-        toggleButton.textContent = 'sunset ?';
+        toggleButton.textContent = 'sunset';
     } else {
         document.body.className = 'dark-mode';
         renderGallery(nightImagesByDate, false);  // Render night images
-        toggleButton.textContent = 'sunrise?';
+        toggleButton.textContent = 'sunrise';
     }
 }
 
@@ -215,7 +215,7 @@ function adjustNavigationPosition() {
     const navigation = document.querySelector('.navigation');
 
     // Get the position of the title-container
-    const titleHeight = titleContainer.offsetHeight;
+    const titleHeight = titleContainer ? titleContainer.offsetHeight : 0;
     const scrollTop = window.scrollY;
 
     // Adjust the top position of the navigation based on scroll position
