@@ -210,29 +210,22 @@ nextDayButton.addEventListener('click', () => {
 
 window.addEventListener('scroll', adjustNavigationPosition);
 
+// Corrected adjustNavigationPosition function
 function adjustNavigationPosition() {
-    const titleContainer = document.querySelector('.header');
     const navigation = document.querySelector('.navigation');
-
-    // Get the position of the title-container
-    const titleHeight = titleContainer.offsetHeight;
-    const scrollTop = window.scrollY;
-
-    // Adjust the top position of the navigation based on scroll position
-    if (scrollTop >= titleHeight) {
-        navigation.style.top = `${0}px`;
-    } else {
-        navigation.style.top = `${titleHeight}px`;
-    }
+    const windowHeight = window.innerHeight;
+    const navigationHeight = navigation.offsetHeight;
+    
+    // Position navigation relative to viewport
+    navigation.style.position = 'sticky';
+    navigation.style.top = '20px';  // Small offset from the top
+    navigation.style.zIndex = '10';  // Ensure it's above other content
 }
 
-// Call the function initially in case the page is loaded with some scroll
-adjustNavigationPosition();
-
-// Initialization
 window.onload = () => {
     currentDayIndex = 0; // Start with the first day date
     currentNightIndex = 0; // Start with the first night date
     isDay = false; // Start with night mode
     updateMode();
+    adjustNavigationPosition();
 };
